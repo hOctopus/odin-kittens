@@ -1,0 +1,21 @@
+<%= form_for(@kitten) do |f| %>
+  <ul>
+    <%= f.label "Name: " %>
+    <%= f.text_field :name %>
+  </ul>
+  <ul>
+    <%= f.label "Age (in months): " %>
+    <%= f.select :age, options_for_select(1..6) %>
+  </ul>>
+  <ul>
+    <%= f.label "Cuteness factor: " %>
+    <%= f.select :cuteness, options_for_select(1..10) %>
+  </ul>
+  <ul>
+    <%= f.label "Softness factor: " %>
+    <%= f.select :softness, options_for_select(1..10) %>
+  </ul>
+  <ul>
+    <%= f.submit yield(:button_text), class: "btn btn-primary" %>
+  </ul>
+<% end %>
