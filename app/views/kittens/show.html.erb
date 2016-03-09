@@ -1,8 +1,8 @@
 <% provide(:title, @kitten) %>
 
 <ul>
-  <br><%= "Name: #{@kitten.name}" %>
-  <br><%= "Age:  #{@kitten.age}" %>
+  <br><h3><%= "#{@kitten.name}" %></h3>
+  <%= "Age: #{@kitten.age} months" %>
   <br><%= "Cuteness factor (1-10 scale): #{@kitten.cuteness}" %>
   <br><%= "Softness factor (1-10 scale): #{@kitten.softness}" %><br><br>
   <ul><%= link_to "edit this sweet woogums", edit_kitten_path(@kitten) %></ul>

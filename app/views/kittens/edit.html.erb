@@ -1,9 +1,10 @@
 <% provide(:title, "Change kitten parameters") %>
 <% provide(:button_text, "Kitten updated!") %>
 
+<ul><h3>Change kitteh parameters</h3></ul>
 <%= render 'form' %>
 
 <ul>
-  <%= link_to "delete", @kitten, method: :delete,
+  <%= link_to "delete this cuddler (u monster)", @kitten, method: :delete,
       data: { confirm: "Sure you want to delete this precious meeper?" } %>
 </ul>
