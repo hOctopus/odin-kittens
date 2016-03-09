@@ -5,15 +5,15 @@
   </ul>
   <ul>
     <%= f.label "Age (in months): " %>
-    <%= f.select :age, options_for_select(1..6) %>
+    <%= f.select :age, options_for_select(6.downto(1)) %>
   </ul>>
   <ul>
     <%= f.label "Cuteness factor: " %>
-    <%= f.select :cuteness, options_for_select(1..10) %>
+    <%= f.select :cuteness, options_for_select(10.downto(1)) %>
   </ul>
   <ul>
     <%= f.label "Softness factor: " %>
-    <%= f.select :softness, options_for_select(1..10) %>
+    <%= f.select :softness, options_for_select(10.downto(1)) %>
   </ul>
   <ul>
     <%= f.submit yield(:button_text), class: "btn btn-primary" %>

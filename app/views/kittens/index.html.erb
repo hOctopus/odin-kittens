@@ -1,15 +1,17 @@
 <% provide(:title, "All the kittehs") %>
 
-<%= link_to "Make a new fluff monster", new_kitten_path %>
+<ul>
+  <br><%= link_to "Make a new fluff monster", new_kitten_path %><br><br>
 
-<%= will_paginate %>
+  <%= will_paginate %>
 
-<% @kittens.each do |kitten| %>
-  <ul>
-    <%= link_to "Lookie #{kitten.name}!", kitten, method: :get %>
-    <%= link_to "delete", kitten, method: :delete,
-        data: { confirm: "Sure you want to delete this precious baby?" } %>
-  </ul>
-<% end %>
+  <% @kittens.each do |kitten| %>
+    <ul>
+      <%= link_to "Lookie #{kitten.name}!", kitten, method: :get %>
+      <%= link_to "delete", kitten, method: :delete,
+          data: { confirm: "Sure you want to delete this precious baby?" } %>
+    </ul><br>
+  <% end %>
 
-<%= will_paginate %>
+  <%= will_paginate %>
+</ul>
