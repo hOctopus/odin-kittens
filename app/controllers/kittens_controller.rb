@@ -30,10 +30,20 @@ class KittensController < ApplicationController
 
   def index
     @kittens = Kitten.all.paginate(page: params[:page])
+    respond_to do |format|
+      format.html #index.html.erb
+      format.xml  { render xml:  @kittens}
+      format.json { render json: @kittens}
+    end
   end
 
   def show
     @kitten = Kitten.find(params[:id])
+    respond_to do |format|
+      format.html #index.html.erb
+      format.xml  { render xml:  @kitten}
+      format.json { render json: @kitten}
+    end
     @title  = @kitten.name
   end
 
